@@ -259,13 +259,6 @@ def process_genbank(list_files):
 
 
 
-
-whole_genome, genome_genes_cat, genome_genes = process_genbank(list_files)
-
-
-# In[ ]:
-
-
 #obtener valores GC 
 def gc123_genomes(genomes_dict):
     
@@ -290,7 +283,6 @@ def gc123_genomes(genomes_dict):
     return gc123_output_list
 
 
-# In[ ]:
 
 
 def df_genomes_gc_original(gc123_list):
@@ -432,7 +424,6 @@ def df_genomes_genes_gc_original(gc123_genes_list):
 
 # # Dinucleótidos
 
-# In[ ]:
 
 
 #obtener la lista de dinucleótidos
@@ -445,7 +436,6 @@ for pair in dinucl:
 #print(dinucleotidos)
 
 
-# In[ ]:
 
 
 #determinar que nucleótidos hay que tener en cuenta para el cálculo de
@@ -489,7 +479,6 @@ def value_dinucleotidos(pair, C_total, G_total, T_total, A_total, din_dict):
         return(x, y)
 
 
-# In[ ]:
 
 
 #cálculo de la frecuencia de dinucleótidos cuando no se tiene en cuenta la posición
@@ -612,7 +601,6 @@ def obs_esp_genoma(frequency_dinucleotidos, C_total, G_total, T_total, A_total):
     return obs_esp_dinucl_por_tipo
 
 
-# In[ ]:
 
 
 def df_genomes_dinucleotidos_original(obs_esp):
@@ -645,7 +633,6 @@ def df_genomes_dinucleotidos_original(obs_esp):
     return df_final
 
 
-# In[ ]:
 
 
 #cálculo de la frecuencia de los dinucleótidos en los genes, 
@@ -707,7 +694,6 @@ def freq_dinucleotidos_genes(genome_by_genes):
     return dinucleotidos_por_tipo, C_total, G_total, T_total, A_total
 
 
-# In[ ]:
 
 
 #cálculo de la frecuencia de los dinucleótidos en los genes,
@@ -754,7 +740,6 @@ def freq_dinucleotidos_123_genes(genome):
     return dinucleotidos_12, dinucleotidos_23
 
 
-# In[ ]:
 
 
 #cálculo de la frecuencia observados/esperados en los genes
@@ -791,7 +776,6 @@ def obs_esp_genes(frequency_dinucleotidos, C_total, G_total, T_total, A_total):
     return obs_esp_dinucl_por_tipo
 
 
-# In[ ]:
 
 
 def df_genomes_genes_gc_original(obs_esp_gen):
